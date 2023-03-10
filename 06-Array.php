@@ -30,4 +30,42 @@ var_dump($values);
 // Terdapat fungsi count($array) untuk
 // menghitung jumlah nilai pada array.
 echo "Jumlah data pada array: " . count($values) . "\n";
+
+
+// Associative Array atau Map
+// Jikalau tadi array memiliki key berupa angka
+// dari nol, maka pada Associative Array kita
+// dapat mengatur key untuk setiap nilai. Key
+// tersebut bisa berupa angka atau String.
+// Penulisannya adalah
+// array( key1 => value1, key2 => value2, ... )
+$data = array(
+    "firstname" => "Aldo",
+    "middlename" => "Adirajasa",
+    "lastname" => "Fathoni"
+);
+
+// Bisa dilihat hasilnya dengan var_dump()
+var_dump($data);
+
+// Maka sekarang pemanggilan dan perubahan nilai
+// dilakukan menggunakan indeks yang telah diatur
+// sebelumnya.
+$data["firstname"] = "Abu Abdillah";
+$data["middlename"] = "Aldo Adirajasa";
+
+// Dapat ditambahkan pula nilai baru dengan key baru
+$data["nickname"] = "Aldo";
+var_dump($data);
+
+
+// Array di dalam Array
+// Karena sebuah Array juga adalah sebuah nilai, kita
+// dapat Array sebagai salah satu nilai (atau lebih)
+// di dalam Array.
+$datas=[
+    ["Aldo", "Adirajasa", "Fathoni"],
+    ["Ahmad", "Hilmi", "Tamaam"]
+];
+var_dump($datas);
 ?>
